@@ -4,5 +4,5 @@ class Solution:
         for i in range(len(stones)):
             for j in range(len(jewels)):
                 if stones[i] == jewels[j]:
-                    k +=1 
+                    k +=1
         return k
