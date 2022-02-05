@@ -5,4 +5,5 @@ class Solution:
         for i in range(len(lst)):
             if lst[i] == ".":
                 lst[i] = "[.]"
-        return ''.join([str(i) for i in lst])
+        return ''.join([i for i in lst])
+        
