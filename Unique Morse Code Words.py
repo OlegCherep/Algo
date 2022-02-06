@@ -1,6 +1,5 @@
 class Solution:
     def uniqueMorseRepresentations(self, words: List[str]) -> int:
-        m = {chr(97 + i) : i for i in range(26)}
         morse = [".-","-...","-.-.","-..",".",
                 "..-.","--.","....","..",".---",
                 "-.-",".-..","--","-.","---",
@@ -10,7 +9,7 @@ class Solution:
         for i in range(len(words)):
             str = ""
             for j in range(len(words[i])):
-                str += mors[m[words[i][j]]]
+                str += morse[ord(words[i][j]) - 97]
             lst.append(str)
         
         return len(set(lst))
